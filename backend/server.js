@@ -21,7 +21,7 @@ connection.once('open', () => {
 })
 
 app.use('/exercises', exerciseRouter);
-app.use('users', usersRouter);
+app.use('/users', usersRouter);
 
 app.listen(port, () => {
     console.log(`Server is listening on port: ${port}`);
