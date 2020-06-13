@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-moongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true}
+moongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 const connection =  moongoose.connection;
 connection.once('open', () => {
